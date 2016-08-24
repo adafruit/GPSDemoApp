@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="GPSHeaded.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GPSHeaded"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel x:Name="RMC_Panel" HorizontalAlignment="Left" Height="500" Margin="40,59,0,0" VerticalAlignment="Top" Width="486">
+            <TextBox x:Name="LatLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Latitude" VerticalAlignment="Top" Width="137" IsReadOnly="True" Margin="0,10,-65.8,-13.2" FontSize="24" BorderThickness="0"/>
+            <TextBox x:Name="LatTextBox" Height="48" TextWrapping="Wrap" Text="Latitude" VerticalAlignment="Top" IsReadOnly="True" Margin="142,10,-322,-13.2" FontSize="24"/>
+            <TextBox x:Name="LatHemiTextBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="W" VerticalAlignment="Top" Width="64" Margin="327,10,-283,-25.2" FontSize="24" IsReadOnly="True"/>
+            <TextBox x:Name="LonLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Top" Width="137" IsReadOnly="True" Margin="0,58,-65.8,-61.2" FontSize="24" BorderThickness="0"/>
+            <TextBox x:Name="LonTextBox" Height="48" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Top" IsReadOnly="True" Margin="142,58,-322,-61.2" FontSize="24"/>
+            <TextBox x:Name="LonHemiTextBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="N" VerticalAlignment="Top" Width="27" Margin="327,58,-283,-73.2" FontSize="24" IsReadOnly="True"/>
+            <TextBox x:Name="TimeLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" Width="137" Margin="0,106,-65.8,-115" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="DateLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" Width="137" Margin="0,154,-65.8,-162.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="TimeTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,106,-322,-109.2" FontSize="24"/>
+            <TextBox x:Name="DateTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,154,-322,-157.2" FontSize="24"/>
+            <TextBox x:Name="SpeedLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Speed" VerticalAlignment="Top" Width="137" Margin="0,202,-65.8,-210.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="SpeedTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,202,-322,-205.2" FontSize="24"/>
+            <TextBox x:Name="CourseTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,250,-322,-253.2" FontSize="24"/>
+            <TextBox x:Name="CourseLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Course" VerticalAlignment="Top" Width="137" Margin="0,250,-65.8,-258.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="KnotsLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="kts" VerticalAlignment="Top" Width="137" Margin="327,202,-392.8,-210.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="AltitudeTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,298,-322,-301.2" FontSize="24"/>
+            <TextBox x:Name="AltLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Altitude" VerticalAlignment="Top" Width="137" Margin="0,298,-65.8,-306.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="SatellitesTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,346,-322,-349.2" FontSize="24"/>
+            <TextBox x:Name="SatLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Satellites" VerticalAlignment="Top" Width="137" Margin="0,346,-65.8,-354.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
+            <TextBox x:Name="AltUnitsTextBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" Width="27" Margin="327,298,-283,-313.2" FontSize="24" IsReadOnly="True"/>
+        </RelativePanel>
+    </Grid>
+</Page>
