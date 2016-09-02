@@ -29,7 +29,6 @@
             <TextBox x:Name="SatellitesTextBox" Height="48" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Margin="142,346,-322,-349.2" FontSize="24"/>
             <TextBox x:Name="SatLabel" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="Satellites" VerticalAlignment="Top" Width="137" Margin="0,346,-65.8,-354.8" FontSize="24" IsReadOnly="True" BorderThickness="0"/>
             <TextBox x:Name="AltUnitsTextBox" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" Text="m" VerticalAlignment="Top" Width="27" Margin="327,298,-283,-313.2" FontSize="24" IsReadOnly="True"/>
-            <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="137" Margin="464,346,-536.2,-361.2" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" FontWeight="Bold" FontSize="18" Click="OnQuitButton_Click"/>
         </RelativePanel>
     </Grid>
 </Page>
