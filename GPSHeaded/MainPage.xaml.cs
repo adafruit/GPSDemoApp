@@ -135,5 +135,11 @@ namespace GPSHeaded
                 AltUnitsTextBox.Text = "";
             }
         }
+
+        private void OnQuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            gps.StopReading();
+            Application.Current.Exit();
+        }
     }
 }
