@@ -55,12 +55,23 @@ namespace GPSHeaded
         public MainPage()
         {
             this.InitializeComponent();
-            gps = new GPS();
+        }
 
-            gps.RMCEvent += OnRMCEvent;
-            gps.GGAEvent += OnGGAEvent;
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                gps = new GPS();
 
-            StartGPS();
+                gps.RMCEvent += OnRMCEvent;
+                gps.GGAEvent += OnGGAEvent;
+
+                StartGPS();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(string.Format("Error starting app: {0}", ex.Message));
+            }
         }
 
         private async void StartGPS()

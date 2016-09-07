@@ -49,5 +49,6 @@
       <Device Id="any">
         <Function Type="name:serialPort" />
       </Device>
-    </DeviceCapability>  </Capabilities>
+    </DeviceCapability>  
+  </Capabilities>
 </Package>
