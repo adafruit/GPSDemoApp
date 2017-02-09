@@ -51,7 +51,7 @@ namespace GPSHeaded
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        GPS gps { get; set; }
+        Gps gps { get; set; }
 
         public MainPage()
         {
@@ -62,7 +62,7 @@ namespace GPSHeaded
         {
             try
             {
-                gps = new GPS();
+                gps = new Gps();
 
                 gps.RMCEvent += OnRMCEvent;
                 gps.GGAEvent += OnGGAEvent;
@@ -78,7 +78,7 @@ namespace GPSHeaded
         private async void StartGPS()
         {
             // see note below about changing baud rates.
-            await gps.ConnectToUART(9600);
+            await gps.ConnectToUARTAsync(9600);
 
             // To change the baud rate on the GPS:
             // 
@@ -100,13 +100,13 @@ namespace GPSHeaded
 
             if (gps.Connected)
             {
-                await gps.SetSentencesReporting(0, 1, 0, 1, 0, 0);
-                await gps.SetUpdateFrequency(1);  //1Hz.  Change to 5 for 5Hz. Change to 10 for 10Hz.  Change to 0.1 for 0.1Hz.
+                await gps.SetSentencesReportingAsync(0, 1, 0, 1, 0, 0);
+                await gps.SetUpdateFrequencyAsync(1);  //1Hz.  Change to 5 for 5Hz. Change to 10 for 10Hz.  Change to 0.1 for 0.1Hz.
                 gps.StartReading();
             }
         }
 
-        private void OnRMCEvent(object sender, GPS.GPSRMC RMC)
+        private void OnRMCEvent(object sender, Gps.GPSRMC RMC)
         {
             if (RMC.Valid)
             {
@@ -132,9 +132,9 @@ namespace GPSHeaded
             }
         }
 
-        private void OnGGAEvent(object sender, GPS.GPSGGA GGA)
+        private void OnGGAEvent(object sender, Gps.GPSGGA GGA)
         {
-            if (GGA.Quality != GPS.GPSGGA.FixQuality.noFix)
+            if (GGA.Quality != Gps.GPSGGA.FixQuality.noFix)
             {
                 AltitudeTextBox.Text = GGA.Altitude.ToString();
                 SatellitesTextBox.Text = GGA.Satellites.ToString();

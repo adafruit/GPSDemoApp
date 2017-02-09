@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "AdafruitClassLibrary": "1.0.3",
+    "AdafruitClassLibrary": "1.0.7",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
   },
   "frameworks": {
